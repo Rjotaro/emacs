@@ -6,56 +6,56 @@
 ;;;### (autoloads nil "5x5" "play/5x5.el" (0 0 0 0))
 ;;; Generated autoloads from play/5x5.el
 
-(autoload '5x5 "5x5" "\
-Play 5x5.
+;(autoload '5x5 "5x5" "\
+;Play 5x5.
 
-The object of 5x5 is very simple, by moving around the grid and flipping
-squares you must fill the grid.
+;The object of 5x5 is very simple, by moving around the grid and flipping
+;squares you must fill the grid.
 
-5x5 keyboard bindings are:
-\\<5x5-mode-map>
-Flip                        \\[5x5-flip-current]
-Move up                     \\[5x5-up]
-Move down                   \\[5x5-down]
-Move left                   \\[5x5-left]
-Move right                  \\[5x5-right]
-Start new game              \\[5x5-new-game]
-New game with random grid   \\[5x5-randomize]
-Random cracker              \\[5x5-crack-randomly]
-Mutate current cracker      \\[5x5-crack-mutating-current]
-Mutate best cracker         \\[5x5-crack-mutating-best]
-Mutate xor cracker          \\[5x5-crack-xor-mutate]
-Solve with Calc             \\[5x5-solve-suggest]
-Rotate left Calc Solutions  \\[5x5-solve-rotate-left]
-Rotate right Calc Solutions \\[5x5-solve-rotate-right]
-Quit current game           \\[5x5-quit-game]
+;5x5 keyboard bindings are:
+;\\<5x5-mode-map>
+;Flip                        \\[5x5-flip-current]
+;Move up                     \\[5x5-up]
+;Move down                   \\[5x5-down]
+;Move left                   \\[5x5-left]
+;Move right                  \\[5x5-right]
+;Start new game              \\[5x5-new-game]
+;New game with random grid   \\[5x5-randomize]
+;Random cracker              \\[5x5-crack-randomly]
+;Mutate current cracker      \\[5x5-crack-mutating-current]
+;Mutate best cracker         \\[5x5-crack-mutating-best]
+;Mutate xor cracker          \\[5x5-crack-xor-mutate]
+;Solve with Calc             \\[5x5-solve-suggest]
+;Rotate left Calc Solutions  \\[5x5-solve-rotate-left]
+;Rotate right Calc Solutions \\[5x5-solve-rotate-right]
+;Quit current game           \\[5x5-quit-game]
 
-\(fn &optional SIZE)" t nil)
+;\(fn &optional SIZE)" t nil)
 
-(autoload '5x5-crack-randomly "5x5" "\
-Attempt to crack 5x5 using random solutions." t nil)
+;(autoload '5x5-crack-randomly "5x5" "\
+;Attempt to crack 5x5 using random solutions." t nil)
 
-(autoload '5x5-crack-mutating-current "5x5" "\
-Attempt to crack 5x5 by mutating the current solution." t nil)
+;(autoload '5x5-crack-mutating-current "5x5" "\
+;Attempt to crack 5x5 by mutating the current solution." t nil)
 
-(autoload '5x5-crack-mutating-best "5x5" "\
-Attempt to crack 5x5 by mutating the best solution." t nil)
+;(autoload '5x5-crack-mutating-best "5x5" "\
+;Attempt to crack 5x5 by mutating the best solution." t nil)
 
-(autoload '5x5-crack-xor-mutate "5x5" "\
-Attempt to crack 5x5 by xoring the current and best solution.
-Mutate the result." t nil)
+;(autoload '5x5-crack-xor-mutate "5x5" "\
+;Attempt to crack 5x5 by xoring the current and best solution.
+;Mutate the result." t nil)
 
-(autoload '5x5-crack "5x5" "\
-Attempt to find a solution for 5x5.
+;(autoload '5x5-crack "5x5" "\
+;Attempt to find a solution for 5x5.
 
-5x5-crack takes the argument BREEDER which should be a function that takes
-two parameters, the first will be a grid vector array that is the current
-solution and the second will be the best solution so far.  The function
-should return a grid vector array that is the new solution.
+;5x5-crack takes the argument BREEDER which should be a function that takes
+;two parameters, the first will be a grid vector array that is the current
+;solution and the second will be the best solution so far.  The function
+;should return a grid vector array that is the new solution.
 
-\(fn BREEDER)" t nil)
+;\(fn BREEDER)" t nil)
 
-(register-definition-prefixes "5x5" '("5x5-"))
+;(register-definition-prefixes "5x5" '("5x5-"))
 
 ;;;***
 
@@ -899,34 +899,34 @@ directory, so that Emacs will know its current contents.
 ;;;### (autoloads nil "animate" "play/animate.el" (0 0 0 0))
 ;;; Generated autoloads from play/animate.el
 
-(autoload 'animate-string "animate" "\
-Display STRING animations starting at position VPOS, HPOS.
-The characters start at randomly chosen places,
-and all slide in parallel to their final positions,
-passing through `animate-n-steps' positions before the final ones.
-If HPOS is nil (or omitted), center the string horizontally
-in the current window.
+;(autoload 'animate-string "animate" "\
+;Display STRING animations starting at position VPOS, HPOS.
+;The characters start at randomly chosen places,
+;and all slide in parallel to their final positions,
+;passing through `animate-n-steps' positions before the final ones.
+;If HPOS is nil (or omitted), center the string horizontally
+;in the current window.
 
-\(fn STRING VPOS &optional HPOS)" nil nil)
+;\(fn STRING VPOS &optional HPOS)" nil nil)
 
-(autoload 'animate-sequence "animate" "\
-Display animation strings from LIST-OF-STRING with buffer *Animation*.
-Strings will be separated from each other by SPACE lines.
- When the variable `animation-buffer-name' is non-nil display
-animation in the buffer named by variable's value, creating the
-buffer if one does not exist.
+;(autoload 'animate-sequence "animate" "\
+;Display animation strings from LIST-OF-STRING with buffer *Animation*.
+;Strings will be separated from each other by SPACE lines.
+; When the variable `animation-buffer-name' is non-nil display
+;animation in the buffer named by variable's value, creating the
+;buffer if one does not exist.
 
-\(fn LIST-OF-STRINGS SPACE)" nil nil)
+;\(fn LIST-OF-STRINGS SPACE)" nil nil)
 
-(autoload 'animate-birthday-present "animate" "\
-Return a birthday present in the buffer *Birthday-Present*.
-When optional arg NAME is non-nil or called-interactively, prompt for
-NAME of birthday present receiver and return a birthday present in
-the buffer *Birthday-Present-for-Name*.
+;(autoload 'animate-birthday-present "animate" "\
+;Return a birthday present in the buffer *Birthday-Present*.
+;When optional arg NAME is non-nil or called-interactively, prompt for
+;NAME of birthday present receiver and return a birthday present in
+;the buffer *Birthday-Present-for-Name*.
 
-\(fn &optional NAME)" t nil)
+;\(fn &optional NAME)" t nil)
 
-(register-definition-prefixes "animate" '("animat"))
+;(register-definition-prefixes "animate" '("animat"))
 
 ;;;***
 
@@ -2240,121 +2240,121 @@ Binhex decode region between START and END.
 ;;;### (autoloads nil "blackbox" "play/blackbox.el" (0 0 0 0))
 ;;; Generated autoloads from play/blackbox.el
 
-(autoload 'blackbox "blackbox" "\
-Play blackbox.
-Optional prefix argument is the number of balls; the default is 4.
+;(autoload 'blackbox "blackbox" "\
+;Play blackbox.
+;Optional prefix argument is the number of balls the default is 4.
 
-What is blackbox?
+;What is blackbox?
 
-Blackbox is a game of hide and seek played on an 8 by 8 grid (the
-Blackbox).  Your opponent (Emacs, in this case) has hidden several
-balls (usually 4) within this box.  By shooting rays into the box and
-observing where they emerge it is possible to deduce the positions of
-the hidden balls.  The fewer rays you use to find the balls, the lower
-your score.
+;Blackbox is a game of hide and seek played on an 8 by 8 grid (the
+;Blackbox).  Your opponent (Emacs, in this case) has hidden several
+;balls (usually 4) within this box.  By shooting rays into the box and
+;observing where they emerge it is possible to deduce the positions of
+;the hidden balls.  The fewer rays you use to find the balls, the lower
+;your score.
 
-Overview of play:
+;Overview of play:
 
-\\<blackbox-mode-map>To play blackbox, type \\[blackbox].  An optional prefix argument
-specifies the number of balls to be hidden in the box; the default is
-four.
+;\\<blackbox-mode-map>To play blackbox, type \\[blackbox].  An optional prefix argument
+;specifies the number of balls to be hidden in the box the default is
+;four.
 
-The cursor can be moved around the box with the standard cursor
-movement keys.
+;The cursor can be moved around the box with the standard cursor
+;movement keys.
 
-To shoot a ray, move the cursor to the edge of the box and press SPC.
-The result will be determined and the playfield updated.
+;To shoot a ray, move the cursor to the edge of the box and press SPC.
+;The result will be determined and the playfield updated.
 
-You may place or remove balls in the box by moving the cursor into the
-box and pressing \\[bb-romp].
+;You may place or remove balls in the box by moving the cursor into the
+;box and pressing \\[bb-romp].
 
-When you think the configuration of balls you have placed is correct,
-press \\[bb-done].  You will be informed whether you are correct or
-not, and be given your score.  Your score is the number of letters and
-numbers around the outside of the box plus five for each incorrectly
-placed ball.  If you placed any balls incorrectly, they will be
-indicated with `x', and their actual positions indicated with `o'.
+;When you think the configuration of balls you have placed is correct,
+;press \\[bb-done].  You will be informed whether you are correct or
+;not, and be given your score.  Your score is the number of letters and
+;numbers around the outside of the box plus five for each incorrectly
+;placed ball.  If you placed any balls incorrectly, they will be
+;indicated with `x', and their actual positions indicated with `o'.
 
-Details:
+;Details:
 
-There are three possible outcomes for each ray you send into the box:
+;There are three possible outcomes for each ray you send into the box:
 
-	Detour: the ray is deflected and emerges somewhere other than
-		where you sent it in.  On the playfield, detours are
-		denoted by matching pairs of numbers -- one where the
-		ray went in, and the other where it came out.
+;	Detour: the ray is deflected and emerges somewhere other than
+;		where you sent it in.  On the playfield, detours are
+;		denoted by matching pairs of numbers -- one where the
+;		ray went in, and the other where it came out.
 
-	Reflection: the ray is reflected and emerges in the same place
-		it was sent in.  On the playfield, reflections are
-		denoted by the letter `R'.
+;	Reflection: the ray is reflected and emerges in the same place
+;		it was sent in.  On the playfield, reflections are
+;		denoted by the letter `R'.
 
-	Hit:	the ray strikes a ball directly and is absorbed.  It does
-		not emerge from the box.  On the playfield, hits are
-		denoted by the letter `H'.
+;	Hit:	the ray strikes a ball directly and is absorbed.  It does
+;		not emerge from the box.  On the playfield, hits are
+;		denoted by the letter `H'.
 
-The rules for how balls deflect rays are simple and are best shown by
-example.
+;The rules for how balls deflect rays are simple and are best shown by
+;example.
 
-As a ray approaches a ball it is deflected ninety degrees.  Rays can
-be deflected multiple times.  In the diagrams below, the dashes
-represent empty box locations and the letter `O' represents a ball.
-The entrance and exit points of each ray are marked with numbers as
-described under \"Detour\" above.  Note that the entrance and exit
-points are always interchangeable.  `*' denotes the path taken by the
-ray.
+;As a ray approaches a ball it is deflected ninety degrees.  Rays can
+;be deflected multiple times.  In the diagrams below, the dashes
+;represent empty box locations and the letter `O' represents a ball.
+;The entrance and exit points of each ray are marked with numbers as
+;described under \"Detour\" above.  Note that the entrance and exit
+;points are always interchangeable.  `*' denotes the path taken by the
+;ray.
 
-Note carefully the relative positions of the ball and the ninety
-degree deflection it causes.
+;Note carefully the relative positions of the ball and the ninety
+;degree deflection it causes.
 
-    1
-  - * - - - - - -         - - - - - - - -         - - - - - - - -
-  - * - - - - - -         - - - - - - - -         - - - - - - - -
-1 * * - - - - - -         - - - - - - - -         - O - - - - O -
-  - - O - - - - -         - - O - - - - -         - - * * * * - -
-  - - - - - - - -         - - - * * * * * 2     3 * * * - - * - -
-  - - - - - - - -         - - - * - - - -         - - - O - * - -
-  - - - - - - - -         - - - * - - - -         - - - - * * - -
-  - - - - - - - -         - - - * - - - -         - - - - * - O -
-                                2                         3
+;    1
+;  - * - - - - - -         - - - - - - - -         - - - - - - - -
+;  - * - - - - - -         - - - - - - - -         - - - - - - - -
+;1 * * - - - - - -         - - - - - - - -         - O - - - - O -
+;  - - O - - - - -         - - O - - - - -         - - * * * * - -
+;  - - - - - - - -         - - - * * * * * 2     3 * * * - - * - -
+;  - - - - - - - -         - - - * - - - -         - - - O - * - -
+;  - - - - - - - -         - - - * - - - -         - - - - * * - -
+;  - - - - - - - -         - - - * - - - -         - - - - * - O -
+;                                2                         3
 
-As mentioned above, a reflection occurs when a ray emerges from the same point
-it was sent in.  This can happen in several ways:
+;As mentioned above, a reflection occurs when a ray emerges from the same point
+;it was sent in.  This can happen in several ways:
 
 
-  - - - - - - - -         - - - - - - - -          - - - - - - - -
-  - - - - O - - -         - - O - O - - -          - - - - - - - -
-R * * * * - - - -         - - - * - - - -          O - - - - - - -
-  - - - - O - - -         - - - * - - - -        R - - - - - - - -
-  - - - - - - - -         - - - * - - - -          - - - - - - - -
-  - - - - - - - -         - - - * - - - -          - - - - - - - -
-  - - - - - - - -       R * * * * - - - -          - - - - - - - -
-  - - - - - - - -         - - - - O - - -          - - - - - - - -
+;  - - - - - - - -         - - - - - - - -          - - - - - - - -
+;  - - - - O - - -         - - O - O - - -          - - - - - - - -
+;R * * * * - - - -         - - - * - - - -          O - - - - - - -
+;  - - - - O - - -         - - - * - - - -        R - - - - - - - -
+;  - - - - - - - -         - - - * - - - -          - - - - - - - -
+;  - - - - - - - -         - - - * - - - -          - - - - - - - -
+;  - - - - - - - -       R * * * * - - - -          - - - - - - - -
+;  - - - - - - - -         - - - - O - - -          - - - - - - - -
 
-In the first example, the ray is deflected downwards by the upper
-ball, then left by the lower ball, and finally retraces its path to
-its point of origin.  The second example is similar.  The third
-example is a bit anomalous but can be rationalized by realizing the
-ray never gets a chance to get into the box.  Alternatively, the ray
-can be thought of as being deflected downwards and immediately
-emerging from the box.
+;In the first example, the ray is deflected downwards by the upper
+;ball, then left by the lower ball, and finally retraces its path to
+;its point of origin.  The second example is similar.  The third
+;example is a bit anomalous but can be rationalized by realizing the
+;ray never gets a chance to get into the box.  Alternatively, the ray
+;can be thought of as being deflected downwards and immediately
+;emerging from the box.
 
-A hit occurs when a ray runs straight into a ball:
+;A hit occurs when a ray runs straight into a ball:
 
-  - - - - - - - -         - - - - - - - -          - - - - - - - -
-  - - - - - - - -         - - - - - - - -          - - - - O - - -
-  - - - - - - - -         - - - - O - - -        H * * * * - - - -
-  - - - - - - - -       H * * * * O - - -          - - - * - - - -
-  - - - - - - - -         - - - - O - - -          - - - O - - - -
-H * * * O - - - -         - - - - - - - -          - - - - - - - -
-  - - - - - - - -         - - - - - - - -          - - - - - - - -
-  - - - - - - - -         - - - - - - - -          - - - - - - - -
+;  - - - - - - - -         - - - - - - - -          - - - - - - - -
+;  - - - - - - - -         - - - - - - - -          - - - - O - - -
+;  - - - - - - - -         - - - - O - - -        H * * * * - - - -
+;  - - - - - - - -       H * * * * O - - -          - - - * - - - -
+;  - - - - - - - -         - - - - O - - -          - - - O - - - -
+;H * * * O - - - -         - - - - - - - -          - - - - - - - -
+;  - - - - - - - -         - - - - - - - -          - - - - - - - -
+;  - - - - - - - -         - - - - - - - -          - - - - - - - -
 
-Be sure to compare the second example of a hit with the first example of
-a reflection.
+;Be sure to compare the second example of a hit with the first example of
+;a reflection.
 
-\(fn NUM)" t nil)
+;\(fn NUM)" t nil)
 
-(register-definition-prefixes "blackbox" '("bb-" "blackbox-"))
+;(register-definition-prefixes "blackbox" '("bb-" "blackbox-"))
 
 ;;;***
 
@@ -2989,21 +2989,21 @@ name of buffer configuration.
 ;;;### (autoloads nil "bubbles" "play/bubbles.el" (0 0 0 0))
 ;;; Generated autoloads from play/bubbles.el
 
-(autoload 'bubbles "bubbles" "\
-Play Bubbles game.
-\\<bubbles-mode-map>
-The goal is to remove all bubbles with as few moves as possible.
-\\[bubbles-plop] on a bubble removes that bubble and all
-connected bubbles of the same color.  Unsupported bubbles fall
-down, and columns that do not contain any bubbles suck the
-columns on its right towards the left.
+;(autoload 'bubbles "bubbles" "\
+;Play Bubbles game.
+;\\<bubbles-mode-map>
+;The goal is to remove all bubbles with as few moves as possible.
+;\\[bubbles-plop] on a bubble removes that bubble and all
+;connected bubbles of the same color.  Unsupported bubbles fall
+;down, and columns that do not contain any bubbles suck the
+;columns on its right towards the left.
 
-\\[bubbles-set-game-easy] sets the difficulty to easy.
-\\[bubbles-set-game-medium] sets the difficulty to medium.
-\\[bubbles-set-game-difficult] sets the difficulty to difficult.
-\\[bubbles-set-game-hard] sets the difficulty to hard." t nil)
+;\\[bubbles-set-game-easy] sets the difficulty to easy.
+;\\[bubbles-set-game-medium] sets the difficulty to medium.
+;\\[bubbles-set-game-difficult] sets the difficulty to difficult.
+;\\[bubbles-set-game-hard] sets the difficulty to hard." t nil)
 
-(register-definition-prefixes "bubbles" '("bubbles-"))
+;(register-definition-prefixes "bubbles" '("bubbles-"))
 
 ;;;***
 
@@ -5940,30 +5940,30 @@ For details see `conf-mode'.
 ;;;### (autoloads nil "cookie1" "play/cookie1.el" (0 0 0 0))
 ;;; Generated autoloads from play/cookie1.el
 
-(autoload 'cookie "cookie1" "\
-Return a random phrase from PHRASE-FILE.
-When the phrase file is read in, display STARTMSG at the beginning
-of load, ENDMSG at the end.
-Interactively, PHRASE-FILE defaults to `cookie-file', unless that
-is nil or a prefix argument is used.
+;(autoload 'cookie "cookie1" "\
+;Return a random phrase from PHRASE-FILE.
+;When the phrase file is read in, display STARTMSG at the beginning
+;of load, ENDMSG at the end.
+;Interactively, PHRASE-FILE defaults to `cookie-file', unless that
+;is nil or a prefix argument is used.
 
-\(fn PHRASE-FILE &optional STARTMSG ENDMSG)" t nil)
+;\(fn PHRASE-FILE &optional STARTMSG ENDMSG)" t nil)
 
-(autoload 'cookie-insert "cookie1" "\
-Insert random phrases from PHRASE-FILE; COUNT of them.
-When the phrase file is read in, display STARTMSG at the beginning
-of load, ENDMSG at the end.
+;(autoload 'cookie-insert "cookie1" "\
+;Insert random phrases from PHRASE-FILE; COUNT of them.
+;When the phrase file is read in, display STARTMSG at the beginning
+;of load, ENDMSG at the end.
 
-\(fn PHRASE-FILE &optional COUNT STARTMSG ENDMSG)" nil nil)
+;\(fn PHRASE-FILE &optional COUNT STARTMSG ENDMSG)" nil nil)
 
-(autoload 'cookie-snarf "cookie1" "\
-Reads in the PHRASE-FILE, returns it as a vector of strings.
-Emit STARTMSG and ENDMSG before and after.  Caches the result; second
-and subsequent calls on the same file won't go to disk.
+;(autoload 'cookie-snarf "cookie1" "\
+;Reads in the PHRASE-FILE, returns it as a vector of strings.
+;Emit STARTMSG and ENDMSG before and after.  Caches the result; second
+;and subsequent calls on the same file won't go to disk.
 
-\(fn PHRASE-FILE &optional STARTMSG ENDMSG)" nil nil)
+;\(fn PHRASE-FILE &optional STARTMSG ENDMSG)" nil nil)
 
-(register-definition-prefixes "cookie1" '("cookie"))
+;(register-definition-prefixes "cookie1" '("cookie"))
 
 ;;;***
 
@@ -7194,28 +7194,28 @@ To specify a nil argument interactively, exit with an empty minibuffer.
 ;;;### (autoloads nil "decipher" "play/decipher.el" (0 0 0 0))
 ;;; Generated autoloads from play/decipher.el
 
-(autoload 'decipher "decipher" "\
-Format a buffer of ciphertext for cryptanalysis and enter Decipher mode." t nil)
+;(autoload 'decipher "decipher" "\
+;Format a buffer of ciphertext for cryptanalysis and enter Decipher mode." t nil)
 
-(autoload 'decipher-mode "decipher" "\
-Major mode for decrypting monoalphabetic substitution ciphers.
-Lower-case letters enter plaintext.
-Upper-case letters are commands.
+;(autoload 'decipher-mode "decipher" "\
+;Major mode for decrypting monoalphabetic substitution ciphers.
+;Lower-case letters enter plaintext.
+;Upper-case letters are commands.
 
-The buffer is made read-only so that normal Emacs commands cannot
-modify it.
+;The buffer is made read-only so that normal Emacs commands cannot
+;modify it.
 
-The most useful commands are:
-\\<decipher-mode-map>
-\\[decipher-digram-list]  Display a list of all digrams & their frequency
-\\[decipher-frequency-count]  Display the frequency of each ciphertext letter
-\\[decipher-adjacency-list]  Show adjacency list for current letter (lists letters appearing next to it)
-\\[decipher-make-checkpoint]  Save the current cipher alphabet (checkpoint)
-\\[decipher-restore-checkpoint]  Restore a saved cipher alphabet (checkpoint)
+;The most useful commands are:
+;\\<decipher-mode-map>
+;\\[decipher-digram-list]  Display a list of all digrams & their frequency
+;\\[decipher-frequency-count]  Display the frequency of each ciphertext letter
+;\\[decipher-adjacency-list]  Show adjacency list for current letter (lists letters appearing next to it)
+;\\[decipher-make-checkpoint]  Save the current cipher alphabet (checkpoint)
+;\\[decipher-restore-checkpoint]  Restore a saved cipher alphabet (checkpoint)
 
-\(fn)" t nil)
+;\(fn)" t nil)
 
-(register-definition-prefixes "decipher" '("decipher-"))
+;(register-definition-prefixes "decipher" '("decipher-"))
 
 ;;;***
 
@@ -8460,16 +8460,16 @@ Display-Line-Numbers mode.
 ;;;### (autoloads nil "dissociate" "play/dissociate.el" (0 0 0 0))
 ;;; Generated autoloads from play/dissociate.el
 
-(autoload 'dissociated-press "dissociate" "\
-Dissociate the text of the current buffer.
-Output goes in buffer named *Dissociation*,
-which is redisplayed each time text is added to it.
-Every so often the user must say whether to continue.
-If ARG is positive, require ARG chars of continuity.
-If ARG is negative, require -ARG words of continuity.
-Default is 2.
+;(autoload 'dissociated-press "dissociate" "\
+;Dissociate the text of the current buffer.
+;Output goes in buffer named *Dissociation*,
+;which is redisplayed each time text is added to it.
+;Every so often the user must say whether to continue.
+;If ARG is positive, require ARG chars of continuity.
+;If ARG is negative, require -ARG words of continuity.
+;Default is 2.
 
-\(fn &optional ARG)" t nil)
+;\(fn &optional ARG)" t nil)
 
 ;;;***
 
@@ -8590,10 +8590,10 @@ See the command `doc-view-mode' for more information on this mode.
 ;;;### (autoloads nil "doctor" "play/doctor.el" (0 0 0 0))
 ;;; Generated autoloads from play/doctor.el
 
-(autoload 'doctor "doctor" "\
-Switch to *doctor* buffer and start giving psychotherapy." t nil)
+;(autoload 'doctor "doctor" "\
+;Switch to *doctor* buffer and start giving psychotherapy." t nil)
 
-(register-definition-prefixes "doctor" '("doc" "make-doctor-variables"))
+;(register-definition-prefixes "doctor" '("doc" "make-doctor-variables"))
 
 ;;;***
 
@@ -8657,10 +8657,10 @@ strings when pressed twice.  See `double-map' for details.
 ;;;### (autoloads nil "dunnet" "play/dunnet.el" (0 0 0 0))
 ;;; Generated autoloads from play/dunnet.el
 
-(autoload 'dunnet "dunnet" "\
-Switch to *dungeon* buffer and start game." t nil)
+;(autoload 'dunnet "dunnet" "\
+;Switch to *dungeon* buffer and start game." t nil)
 
-(register-definition-prefixes "dunnet" '("dun" "obj-special"))
+;(register-definition-prefixes "dunnet" '("dun" "obj-special"))
 
 ;;;***
 
@@ -13697,13 +13697,13 @@ with no args, if that value is non-nil.
 ;;;### (autoloads nil "fortune" "play/fortune.el" (0 0 0 0))
 ;;; Generated autoloads from play/fortune.el
 
-(autoload 'fortune-add-fortune "fortune" "\
-Add STRING to a fortune file FILE.
+;(autoload 'fortune-add-fortune "fortune" "\
+;Add STRING to a fortune file FILE.
 
-Interactively, if called with a prefix argument,
-read the file name to use.  Otherwise use the value of `fortune-file'.
+;Interactively, if called with a prefix argument,
+;read the file name to use.  Otherwise use the value of `fortune-file'.
 
-\(fn STRING FILE)" t nil)
+;\(fn STRING FILE)" t nil)
 
 (autoload 'fortune-from-region "fortune" "\
 Append the current region to a local fortune-like data file.
@@ -13939,14 +13939,14 @@ Interactively, reads the register using `register-read-with-preview'.
 ;;;### (autoloads nil "gamegrid" "play/gamegrid.el" (0 0 0 0))
 ;;; Generated autoloads from play/gamegrid.el
 
-(register-definition-prefixes "gamegrid" '("gamegrid-"))
+;(register-definition-prefixes "gamegrid" '("gamegrid-"))
 
 ;;;***
 
 ;;;### (autoloads nil "gametree" "play/gametree.el" (0 0 0 0))
 ;;; Generated autoloads from play/gametree.el
 
-(register-definition-prefixes "gametree" '("gametree-"))
+;(register-definition-prefixes "gametree" '("gametree-"))
 
 ;;;***
 
@@ -15193,28 +15193,28 @@ Add the window configuration CONF to `gnus-buffer-configuration'.
 ;;;### (autoloads nil "gomoku" "play/gomoku.el" (0 0 0 0))
 ;;; Generated autoloads from play/gomoku.el
 
-(autoload 'gomoku "gomoku" "\
-Start a Gomoku game between you and Emacs.
+;(autoload 'gomoku "gomoku" "\
+;Start a Gomoku game between you and Emacs.
 
-If a game is in progress, this command allows you to resume it.
-If optional arguments N and M are given, an N by M board is used.
-If prefix arg is given for N, M is prompted for.
+;If a game is in progress, this command allows you to resume it.
+;If optional arguments N and M are given, an N by M board is used.
+;If prefix arg is given for N, M is prompted for.
 
-You and Emacs play in turn by marking a free square.  You mark it with X
-and Emacs marks it with O.  The winner is the first to get five contiguous
-marks horizontally, vertically or in diagonal.
+;You and Emacs play in turn by marking a free square.  You mark it with X
+;and Emacs marks it with O.  The winner is the first to get five contiguous
+;marks horizontally, vertically or in diagonal.
 
-You play by moving the cursor over the square you choose and hitting
-\\<gomoku-mode-map>\\[gomoku-human-plays].
+;You play by moving the cursor over the square you choose and hitting
+;\\<gomoku-mode-map>\\[gomoku-human-plays].
 
-This program actually plays a simplified or archaic version of the
-Gomoku game, and ought to be upgraded to use the full modern rules.
+;This program actually plays a simplified or archaic version of the
+;Gomoku game, and ought to be upgraded to use the full modern rules.
 
-Use \\[describe-mode] for more info.
+;Use \\[describe-mode] for more info.
 
-\(fn &optional N M)" t nil)
+;\(fn &optional N M)" t nil)
 
-(register-definition-prefixes "gomoku" '("gomoku-"))
+;(register-definition-prefixes "gomoku" '("gomoku-"))
 
 ;;;***
 
@@ -15763,17 +15763,17 @@ binding mode.
 ;;;### (autoloads nil "handwrite" "play/handwrite.el" (0 0 0 0))
 ;;; Generated autoloads from play/handwrite.el
 
-(autoload 'handwrite "handwrite" "\
-Turns the buffer into a \"handwritten\" document.
-The functions `handwrite-10pt', `handwrite-11pt', `handwrite-12pt'
-and `handwrite-13pt' set up for various sizes of output.
+;(autoload 'handwrite "handwrite" "\
+;Turns the buffer into a \"handwritten\" document.
+;The functions `handwrite-10pt', `handwrite-11pt', `handwrite-12pt'
+;and `handwrite-13pt' set up for various sizes of output.
 
-Variables: `handwrite-linespace'     (default 12)
-           `handwrite-fontsize'      (default 11)
-           `handwrite-numlines'      (default 60)
-           `handwrite-pagenumbering' (default nil)" t nil)
+;Variables: `handwrite-linespace'     (default 12)
+;           `handwrite-fontsize'      (default 11)
+;           `handwrite-numlines'      (default 60)
+;           `handwrite-pagenumbering' (default nil)" t nil)
 
-(register-definition-prefixes "handwrite" '("handwrite-" "menu-bar-handwrite-map"))
+;(register-definition-prefixes "handwrite" '("handwrite-" "menu-bar-handwrite-map"))
 
 ;;;***
 
@@ -15788,25 +15788,25 @@ Variables: `handwrite-linespace'     (default 12)
 ;;;### (autoloads nil "hanoi" "play/hanoi.el" (0 0 0 0))
 ;;; Generated autoloads from play/hanoi.el
 
-(autoload 'hanoi "hanoi" "\
-Towers of Hanoi diversion.  Use NRINGS rings.
+;(autoload 'hanoi "hanoi" "\
+;Towers of Hanoi diversion.  Use NRINGS rings.
 
-\(fn NRINGS)" t nil)
+;\(fn NRINGS)" t nil)
 
-(autoload 'hanoi-unix "hanoi" "\
-Towers of Hanoi, UNIX doomsday version.
-Displays 32-ring towers that have been progressing at one move per
-second since 1970-01-01 00:00:00 GMT.
+;(autoload 'hanoi-unix "hanoi" "\
+;Towers of Hanoi, UNIX doomsday version.
+;Displays 32-ring towers that have been progressing at one move per
+;second since 1970-01-01 00:00:00 GMT.
 
-Repent before ring 31 moves." t nil)
+;Repent before ring 31 moves." t nil)
 
-(autoload 'hanoi-unix-64 "hanoi" "\
-Like hanoi-unix, but pretend to have a 64-bit clock.
-This is, necessarily (as of Emacs 20.3), a crock.  When the
-current-time interface is made s2G-compliant, hanoi.el will need
-to be updated." t nil)
+;(autoload 'hanoi-unix-64 "hanoi" "\
+;Like hanoi-unix, but pretend to have a 64-bit clock.
+;This is, necessarily (as of Emacs 20.3), a crock.  When the
+;current-time interface is made s2G-compliant, hanoi.el will need
+;to be updated." t nil)
 
-(register-definition-prefixes "hanoi" '("hanoi-"))
+;(register-definition-prefixes "hanoi" '("hanoi-"))
 
 ;;;***
 
@@ -20084,19 +20084,19 @@ displayed in the example above.
 ;;;### (autoloads nil "life" "play/life.el" (0 0 0 0))
 ;;; Generated autoloads from play/life.el
 
-(autoload 'life "life" "\
-Run Conway's Life simulation.
-The starting pattern is randomly selected from `life-patterns'.
+;(autoload 'life "life" "\
+;Run Conway's Life simulation.
+;The starting pattern is randomly selected from `life-patterns'.
 
-Prefix arg is the number of tenths of a second to sleep between
-generations (the default is `life-step-time').
+;Prefix arg is the number of tenths of a second to sleep between
+;generations (the default is `life-step-time').
 
-When called from Lisp, optional argument STEP-TIME is the time to
-sleep in seconds.
+;When called from Lisp, optional argument STEP-TIME is the time to
+;sleep in seconds.
 
-\(fn &optional STEP-TIME)" t nil)
+;\(fn &optional STEP-TIME)" t nil)
 
-(register-definition-prefixes "life" '("life-"))
+;(register-definition-prefixes "life" '("life-"))
 
 ;;;***
 
@@ -22207,27 +22207,27 @@ followed by the first character of the construct.
 ;;;### (autoloads nil "morse" "play/morse.el" (0 0 0 0))
 ;;; Generated autoloads from play/morse.el
 
-(autoload 'morse-region "morse" "\
-Convert all text in a given region to morse code.
+;(autoload 'morse-region "morse" "\
+;Convert all text in a given region to morse code.
 
-\(fn BEG END)" t nil)
+;\(fn BEG END)" t nil)
 
-(autoload 'unmorse-region "morse" "\
-Convert morse coded text in region to ordinary ASCII text.
+;(autoload 'unmorse-region "morse" "\
+;Convert morse coded text in region to ordinary ASCII text.
 
-\(fn BEG END)" t nil)
+;\(fn BEG END)" t nil)
 
-(autoload 'nato-region "morse" "\
-Convert all text in a given region to NATO phonetic alphabet.
+;(autoload 'nato-region "morse" "\
+;Convert all text in a given region to NATO phonetic alphabet.
 
-\(fn BEG END)" t nil)
+;\(fn BEG END)" t nil)
 
-(autoload 'denato-region "morse" "\
-Convert NATO phonetic alphabet in region to ordinary ASCII text.
+;(autoload 'denato-region "morse" "\
+;Convert NATO phonetic alphabet in region to ordinary ASCII text.
 
-\(fn BEG END)" t nil)
+;\(fn BEG END)" t nil)
 
-(register-definition-prefixes "morse" '("morse-code" "nato-alphabet"))
+;(register-definition-prefixes "morse" '("morse-code" "nato-alphabet"))
 
 ;;;***
 
@@ -22300,10 +22300,10 @@ Main entry point for MPC." t nil)
 ;;;### (autoloads nil "mpuz" "play/mpuz.el" (0 0 0 0))
 ;;; Generated autoloads from play/mpuz.el
 
-(autoload 'mpuz "mpuz" "\
-Multiplication puzzle with GNU Emacs." t nil)
+;(autoload 'mpuz "mpuz" "\
+;Multiplication puzzle with GNU Emacs." t nil)
 
-(register-definition-prefixes "mpuz" '("mpuz-"))
+;(register-definition-prefixes "mpuz" '("mpuz-"))
 
 ;;;***
 
@@ -25631,16 +25631,16 @@ Called through `file-coding-system-alist', before the file is visited for real.
 ;;;### (autoloads nil "pong" "play/pong.el" (0 0 0 0))
 ;;; Generated autoloads from play/pong.el
 
-(autoload 'pong "pong" "\
-Play pong and waste time.
-This is an implementation of the classical game pong.
-Move left and right bats and try to bounce the ball to your opponent.
+;(autoload 'pong "pong" "\
+;Play pong and waste time.
+;This is an implementation of the classical game pong.
+;Move left and right bats and try to bounce the ball to your opponent.
 
-pong-mode keybindings:\\<pong-mode-map>
+;pong-mode keybindings:\\<pong-mode-map>
 
-\\{pong-mode-map}" t nil)
+;\\{pong-mode-map}" t nil)
 
-(register-definition-prefixes "pong" '("pong-"))
+;(register-definition-prefixes "pong" '("pong-"))
 
 ;;;***
 
@@ -30750,23 +30750,23 @@ Send mail that was queued as a result of setting `smtpmail-queue-mail'." t nil)
 ;;;### (autoloads nil "snake" "play/snake.el" (0 0 0 0))
 ;;; Generated autoloads from play/snake.el
 
-(autoload 'snake "snake" "\
-Play the Snake game.
-Move the snake around without colliding with its tail or with the border.
+;(autoload 'snake "snake" "\
+;Play the Snake game.
+;Move the snake around without colliding with its tail or with the border.
 
-Eating dots causes the snake to get longer.
+;Eating dots causes the snake to get longer.
 
-Snake mode keybindings:
-   \\<snake-mode-map>
-\\[snake-start-game]	Starts a new game of Snake
-\\[snake-end-game]	Terminates the current game
-\\[snake-pause-game]	Pauses (or resumes) the current game
-\\[snake-move-left]	Makes the snake move left
-\\[snake-move-right]	Makes the snake move right
-\\[snake-move-up]	Makes the snake move up
-\\[snake-move-down]	Makes the snake move down" t nil)
+;Snake mode keybindings:
+;   \\<snake-mode-map>
+;\\[snake-start-game]	Starts a new game of Snake
+;\\[snake-end-game]	Terminates the current game
+;\\[snake-pause-game]	Pauses (or resumes) the current game
+;\\[snake-move-left]	Makes the snake move left
+;\\[snake-move-right]	Makes the snake move right
+;\\[snake-move-up]	Makes the snake move up
+;\\[snake-move-down]	Makes the snake move down" t nil)
 
-(register-definition-prefixes "snake" '("snake-"))
+;(register-definition-prefixes "snake" '("snake-"))
 
 ;;;***
 
@@ -30972,77 +30972,77 @@ This function is suitable for execution in an init file.
 ;;;### (autoloads nil "solitaire" "play/solitaire.el" (0 0 0 0))
 ;;; Generated autoloads from play/solitaire.el
 
-(autoload 'solitaire "solitaire" "\
-Play Solitaire.
+;(autoload 'solitaire "solitaire" "\
+;Play Solitaire.
 
-To play Solitaire, type \\[solitaire].
-\\<solitaire-mode-map>
-Move around the board using the cursor keys.
-Move stones using \\[solitaire-move] followed by a direction key.
-Undo moves using \\[solitaire-undo].
-Check for possible moves using \\[solitaire-do-check].
-\(The variable `solitaire-auto-eval' controls whether to automatically
-check after each move or undo.)
+;To play Solitaire, type \\[solitaire].
+;\\<solitaire-mode-map>
+;Move around the board using the cursor keys.
+;Move stones using \\[solitaire-move] followed by a direction key.
+;Undo moves using \\[solitaire-undo].
+;Check for possible moves using \\[solitaire-do-check].
+;\(The variable `solitaire-auto-eval' controls whether to automatically
+;check after each move or undo.)
 
-What is Solitaire?
+;What is Solitaire?
 
-I don't know who invented this game, but it seems to be rather old and
-its origin seems to be northern Africa.  Here's how to play:
-Initially, the board will look similar to this:
+;I don't know who invented this game, but it seems to be rather old and
+;its origin seems to be northern Africa.  Here's how to play:
+;Initially, the board will look similar to this:
 
-	Le Solitaire
-	============
+;	Le Solitaire
+;	============
 
-		o   o   o
+;		o   o   o
 
-		o   o   o
+;		o   o   o
 
-	o   o   o   o   o   o   o
+;	o   o   o   o   o   o   o
 
-	o   o   o   .   o   o   o
+;	o   o   o   .   o   o   o
 
-	o   o   o   o   o   o   o
+;	o   o   o   o   o   o   o
 
-		o   o   o
+;		o   o   o
 
-		o   o   o
+;		o   o   o
 
-Let's call the o's stones and the .'s holes.  One stone fits into one
-hole.  As you can see, all holes but one are occupied by stones.  The
-aim of the game is to get rid of all but one stone, leaving that last
-one in the middle of the board if you're cool.
+;Let's call the o's stones and the .'s holes.  One stone fits into one
+;hole.  As you can see, all holes but one are occupied by stones.  The
+;aim of the game is to get rid of all but one stone, leaving that last
+;one in the middle of the board if you're cool.
 
-A stone can be moved if there is another stone next to it, and a hole
-after that one.  Thus there must be three fields in a row, either
-horizontally or vertically, up, down, left or right, which look like
-this:  o  o  .
+;A stone can be moved if there is another stone next to it, and a hole
+;after that one.  Thus there must be three fields in a row, either
+;horizontally or vertically, up, down, left or right, which look like
+;this:  o  o  .
 
-Then the first stone is moved to the hole, jumping over the second,
-which therefore is taken away.  The above thus `evaluates' to:  .  .  o
+;Then the first stone is moved to the hole, jumping over the second,
+;which therefore is taken away.  The above thus `evaluates' to:  .  .  o
 
-That's all.  Here's the board after two moves:
+;That's all.  Here's the board after two moves:
 
-		o   o   o
+;		o   o   o
 
-		.   o   o
+;		.   o   o
 
-	o   o   .   o   o   o   o
+;	o   o   .   o   o   o   o
 
-	o   .   o   o   o   o   o
+;	o   .   o   o   o   o   o
 
-	o   o   o   o   o   o   o
+;	o   o   o   o   o   o   o
 
-		o   o   o
+;		o   o   o
 
-		o   o   o
+;		o   o   o
 
-Pick your favorite shortcuts:
+;Pick your favorite shortcuts:
 
-\\{solitaire-mode-map}
+;\\{solitaire-mode-map}
 
-\(fn ARG)" t nil)
+;\(fn ARG)" t nil)
 
-(register-definition-prefixes "solitaire" '("solitaire-"))
+;(register-definition-prefixes "solitaire" '("solitaire-"))
 
 ;;;***
 
@@ -31333,13 +31333,13 @@ selected.  If the speedbar frame is active, then select the attached frame." t n
 ;;;### (autoloads nil "spook" "play/spook.el" (0 0 0 0))
 ;;; Generated autoloads from play/spook.el
 
-(autoload 'spook "spook" "\
-Adds that special touch of class to your outgoing mail." t nil)
+;(autoload 'spook "spook" "\
+;Adds that special touch of class to your outgoing mail." t nil)
 
-(autoload 'snarf-spooks "spook" "\
-Return a vector containing the lines from `spook-phrases-file'." nil nil)
+;(autoload 'snarf-spooks "spook" "\
+;Return a vector containing the lines from `spook-phrases-file'." nil nil)
 
-(register-definition-prefixes "spook" '("spook-phrase"))
+;(register-definition-prefixes "spook" '("spook-phrase"))
 
 ;;;***
 
@@ -32062,18 +32062,18 @@ Read a complex stroke and insert its glyph into the current buffer." t nil)
 ;;;### (autoloads nil "studly" "play/studly.el" (0 0 0 0))
 ;;; Generated autoloads from play/studly.el
 
-(autoload 'studlify-region "studly" "\
-Studlify-case the region.
+;(autoload 'studlify-region "studly" "\
+;Studlify-case the region.
 
-\(fn BEGIN END)" t nil)
+;\(fn BEGIN END)" t nil)
 
-(autoload 'studlify-word "studly" "\
-Studlify-case the current word, or COUNT words if given an argument.
+;(autoload 'studlify-word "studly" "\
+;Studlify-case the current word, or COUNT words if given an argument.
 
-\(fn COUNT)" t nil)
+;\(fn COUNT)" t nil)
 
-(autoload 'studlify-buffer "studly" "\
-Studlify-case the current buffer." t nil)
+;(autoload 'studlify-buffer "studly" "\
+;Studlify-case the current buffer." t nil)
 
 ;;;***
 
@@ -33203,24 +33203,24 @@ Start coverage on function under point." t nil)
 ;;;### (autoloads nil "tetris" "play/tetris.el" (0 0 0 0))
 ;;; Generated autoloads from play/tetris.el
 
-(autoload 'tetris "tetris" "\
-Play the Tetris game.
-Shapes drop from the top of the screen, and the user has to move and
-rotate the shape to fit in with those at the bottom of the screen so
-as to form complete rows.
+;(autoload 'tetris "tetris" "\
+;Play the Tetris game.
+;Shapes drop from the top of the screen, and the user has to move and
+;rotate the shape to fit in with those at the bottom of the screen so
+;as to form complete rows.
 
-tetris-mode keybindings:
-\\<tetris-mode-map>
-\\[tetris-start-game]	Start a new game of Tetris
-\\[tetris-end-game]	Terminate the current game
-\\[tetris-pause-game]	Pause (or resume) the current game
-\\[tetris-move-left]	Move the shape one square to the left
-\\[tetris-move-right]	Move the shape one square to the right
-\\[tetris-rotate-prev]	Rotate the shape clockwise
-\\[tetris-rotate-next]	Rotate the shape anticlockwise
-\\[tetris-move-bottom]	Drop the shape to the bottom of the playing area" t nil)
+;tetris-mode keybindings:
+;\\<tetris-mode-map>
+;\\[tetris-start-game]	Start a new game of Tetris
+;\\[tetris-end-game]	Terminate the current game
+;\\[tetris-pause-game]	Pause (or resume) the current game
+;\\[tetris-move-left]	Move the shape one square to the left
+;\\[tetris-move-right]	Move the shape one square to the right
+;\\[tetris-rotate-prev]	Rotate the shape clockwise
+;\\[tetris-rotate-next]	Rotate the shape anticlockwise
+;\\[tetris-move-bottom]	Drop the shape to the bottom of the playing area" t nil)
 
-(register-definition-prefixes "tetris" '("tetris-"))
+;(register-definition-prefixes "tetris" '("tetris-"))
 
 ;;;***
 
@@ -39150,10 +39150,10 @@ Extract file name from an yenc header." nil nil)
 ;;;### (autoloads nil "zone" "play/zone.el" (0 0 0 0))
 ;;; Generated autoloads from play/zone.el
 
-(autoload 'zone "zone" "\
-Zone out, completely." t nil)
+;(autoload 'zone "zone" "\
+;Zone out, completely." t nil)
 
-(register-definition-prefixes "zone" '("zone-"))
+;(register-definition-prefixes "zone" '("zone-"))
 
 ;;;***
 

@@ -1599,49 +1599,49 @@ mail status in mode line"))
 
 ;; The "Tools" menu items
 
-(defvar menu-bar-games-menu
-  (let ((menu (make-sparse-keymap "Games")))
-
-    (bindings--define-key menu [zone]
-      '(menu-item "Zone Out" zone
-                  :help "Play tricks with Emacs display when Emacs is idle"))
-    (bindings--define-key menu [tetris]
-      '(menu-item "Tetris" tetris
-                  :help "Falling blocks game"))
-    (bindings--define-key menu [solitaire]
-      '(menu-item "Solitaire" solitaire
-                  :help "Get rid of all the stones"))
-    (bindings--define-key menu [snake]
-      '(menu-item "Snake" snake
-                  :help "Move snake around avoiding collisions"))
-    (bindings--define-key menu [pong]
-      '(menu-item "Pong" pong
-                  :help "Bounce the ball to your opponent"))
-    (bindings--define-key menu [mult]
-      '(menu-item "Multiplication Puzzle"  mpuz
-                  :help "Exercise brain with multiplication"))
-    (bindings--define-key menu [life]
-      '(menu-item "Life"  life
-                  :help "Watch how John Conway's cellular automaton evolves"))
-    (bindings--define-key menu [hanoi]
-      '(menu-item "Towers of Hanoi" hanoi
-                  :help "Watch Towers-of-Hanoi puzzle solved by Emacs"))
-    (bindings--define-key menu [gomoku]
-      '(menu-item "Gomoku"  gomoku
-                  :help "Mark 5 contiguous squares (like tic-tac-toe)"))
-    (bindings--define-key menu [bubbles]
-      '(menu-item "Bubbles" bubbles
-                  :help "Remove all bubbles using the fewest moves"))
-    (bindings--define-key menu [black-box]
-      '(menu-item "Blackbox"  blackbox
-                  :help "Find balls in a black box by shooting rays"))
-    (bindings--define-key menu [adventure]
-      '(menu-item "Adventure"  dunnet
-                  :help "Dunnet, a text Adventure game for Emacs"))
-    (bindings--define-key menu [5x5]
-      '(menu-item "5x5" 5x5
-                  :help "Fill in all the squares on a 5x5 board"))
-    menu))
+;(defvar menu-bar-games-menu
+;  (let ((menu (make-sparse-keymap "Games")))
+;
+;    (bindings--define-key menu [zone]
+;      '(menu-item "Zone Out" zone
+;                  :help "Play tricks with Emacs display when Emacs is idle"))
+;    (bindings--define-key menu [tetris]
+;      '(menu-item "Tetris" tetris
+;                  :help "Falling blocks game"))
+;    (bindings--define-key menu [solitaire]
+;      '(menu-item "Solitaire" solitaire
+;                  :help "Get rid of all the stones"))
+;    (bindings--define-key menu [snake]
+;      '(menu-item "Snake" snake
+;                  :help "Move snake around avoiding collisions"))
+;    (bindings--define-key menu [pong]
+;      '(menu-item "Pong" pong
+;                  :help "Bounce the ball to your opponent"))
+;    (bindings--define-key menu [mult]
+;      '(menu-item "Multiplication Puzzle"  mpuz
+;                  :help "Exercise brain with multiplication"))
+;    (bindings--define-key menu [life]
+;      '(menu-item "Life"  life
+;                  :help "Watch how John Conway's cellular automaton evolves"))
+;    (bindings--define-key menu [hanoi]
+;      '(menu-item "Towers of Hanoi" hanoi
+;                  :help "Watch Towers-of-Hanoi puzzle solved by Emacs"))
+;    (bindings--define-key menu [gomoku]
+;      '(menu-item "Gomoku"  gomoku
+;                  :help "Mark 5 contiguous squares (like tic-tac-toe)"))
+;    (bindings--define-key menu [bubbles]
+;      '(menu-item "Bubbles" bubbles
+;                  :help "Remove all bubbles using the fewest moves"))
+;    (bindings--define-key menu [black-box]
+;      '(menu-item "Blackbox"  blackbox
+;                  :help "Find balls in a black box by shooting rays"))
+;    (bindings--define-key menu [adventure]
+;      '(menu-item "Adventure"  dunnet
+;                  :help "Dunnet, a text Adventure game for Emacs"))
+;    (bindings--define-key menu [5x5]
+;      '(menu-item "5x5" 5x5
+;                  :help "Fill in all the squares on a 5x5 board"))
+;    menu))
 
 (defvar menu-bar-encryption-decryption-menu
   (let ((menu (make-sparse-keymap "Encryption/Decryption")))
@@ -1734,8 +1734,8 @@ mail status in mode line"))
 (defvar menu-bar-tools-menu
   (let ((menu (make-sparse-keymap "Tools")))
 
-    (bindings--define-key menu [games]
-      `(menu-item "Games" ,menu-bar-games-menu))
+;    (bindings--define-key menu [games]
+;      `(menu-item "Games" ,menu-bar-games-menu))
 
     (bindings--define-key menu [separator-games]
       menu-bar-separator)
