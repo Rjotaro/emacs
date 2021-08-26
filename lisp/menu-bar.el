@@ -1737,8 +1737,8 @@ mail status in mode line"))
 ;    (bindings--define-key menu [games]
 ;      `(menu-item "Games" ,menu-bar-games-menu))
 
-    (bindings--define-key menu [separator-games]
-      menu-bar-separator)
+;    (bindings--define-key menu [separator-games]
+;      menu-bar-separator)
 
     (bindings--define-key menu [encryption-decryption]
       `(menu-item "Encryption/Decryption"
