@@ -1091,7 +1091,8 @@ The selected font will be the default on both the existing and future frames."
        (> val 0)))
 
 (defun menu-bar-set-tool-bar-position (position)
-  (customize-set-variable 'tool-bar-mode t)
+  ;;(customize-set-variable 'tool-bar-mode t)
+  (customize-set-variable 'tool-bar-mode nil)
   (customize-set-variable 'tool-bar-position position))
 (defun menu-bar-showhide-tool-bar-menu-customize-disable ()
   "Do not display tool bars."
@@ -2492,7 +2493,7 @@ created in the future."
 ;; customize consider disabling the menu bar a customization, and save
 ;; that.  We could do this for real by setting :init-value above, but
 ;; that would overwrite disabling the menu bar from X resources.
-(put 'menu-bar-mode 'standard-value '(t))
+(put 'menu-bar-mode 'standard-value '(nil))
 
 (defun toggle-menu-bar-mode-from-frame (&optional arg)
   "Toggle display of the menu bar of the current frame.
