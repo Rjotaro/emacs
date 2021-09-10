@@ -28,7 +28,6 @@
 
 # Built by 'autogen.sh'.
 /aclocal.m4
-/configure
 src/config.in
 
 # Built by 'configure'.
